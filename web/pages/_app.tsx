@@ -39,6 +39,13 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <div>
+      <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1" async></script>
+      <df-messenger
+        intent="WELCOME"
+        chat-title="Robosch"
+        agent-id="df0aaf3a-291b-4447-bfbe-bfcf744cb576"
+        language-code="pt-br"
+      ></df-messenger>
       {renderHeader()}
       <Component {...pageProps} notificate={notificate} />
       <Snackbar
